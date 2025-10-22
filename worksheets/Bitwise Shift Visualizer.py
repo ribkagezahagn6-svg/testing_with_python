@@ -1,31 +1,15 @@
-print("Datatype & I/O Exercises")
-# Student Grade Analyzer
+integer_1=int(input("Enter first number: "))
+shift=int(input("Enter number of shif positions: "))
+print("original number: "+integer_1)
+print ("binary( befor shift):"+ bin(integer_1))
 
-# Step 1: Input
-name = input("Enter student name: ")
 
-marks = []
-for i in range(1, 4):
-    mark = float(input(f"Enter mark for subject {i}: "))
-    marks.append(mark)
+left_shift = integer_1<<shift
+print("After left shift "+shift +" positions :")
+print("Decimal :"+left_shift+".")
+print("binary: "+bin(left_shift))
 
-# Step 2: Process
-average = sum(marks) / len(marks)
-
-if average >= 90:
-    grade = 'A'
-elif average >= 80:
-    grade = 'B'
-elif average >= 70:
-    grade = 'C'
-elif average >= 60:
-    grade = 'D'
-else:
-    grade = 'F'
-
-# Step 3: Output
-print("\n--- Report Card ---")
-print(f"Name: {name}")
-print(f"Marks: {marks}")
-print(f"Average: {average:.2f}")
-print(f"Grade: {grade}")
+right_shift=integer_1 >> shift
+print("after right shift "+shift +"positions: ")
+print("decimal: "+right_shift) 
+print("binary: "+bin(right_shift))
